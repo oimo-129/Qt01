@@ -8,11 +8,35 @@
 #include<QTextCodec>
 #include<QDebug>
 #include<QDateTime>
+#include<QPushButton>
 MyNote::MyNote(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MyNote)
 {
     ui->setupUi(this);
+    //进行相关的测试演示
+    QPushButton *btn=new QPushButton("aaa",this);
+    btn->move(400,400);
+    int m=0;
+    QPushButton *btn2=new QPushButton("变数按钮2",this);
+    btn2->move(200,200
+               );
+    QPushButton *btn1=new QPushButton("变数按钮1",this);
+
+    connect(btn1,btn1->clicked,this,[=](){
+    qDebug()<<m;
+    });
+    connect(btn2,btn2->clicked,this,[m]()mutable
+    {
+        m=20;
+        qDebug()<<m;
+    });
+
+    connect(btn,&QPushButton::clicked,this,[=](){
+        btn->setText("bbb");
+    });
+    int num=[=]()->int{return 1000;}();
+    qDebug()<<num;
 }
 
 MyNote::~MyNote()
@@ -34,6 +58,7 @@ void MyNote::on_actionOpen_triggered()
     qDebug()<<files;
     ui->lineEdit->setText(files);
   QTextCodec *codec = QTextCodec::codecForName("gbk");
+  //QTextCodec::setCodecForCStrings(QTextCodec::codecForName("UTF-8"));
 QFile file(files);
     file.open(QIODevice::ReadOnly);
     QByteArray array;
