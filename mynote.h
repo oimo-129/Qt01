@@ -1,6 +1,6 @@
 #ifndef MYNOTE_H
 #define MYNOTE_H
-
+/*git 提交代码*/
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
