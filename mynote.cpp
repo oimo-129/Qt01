@@ -9,34 +9,19 @@
 #include<QDebug>
 #include<QDateTime>
 #include<QPushButton>
+#include<QMessageBox>
+#include<QCloseEvent>
+QString FileContent;
 MyNote::MyNote(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MyNote)
 {
     ui->setupUi(this);
     //进行相关的测试演示
-    QPushButton *btn=new QPushButton("aaa",this);
-    btn->move(400,400);
-    int m=0;
-    QPushButton *btn2=new QPushButton("变数按钮2",this);
-    btn2->move(200,200
-               );
-    QPushButton *btn1=new QPushButton("变数按钮1",this);
+//    connect(ui->actionExit,ui->actionExit->triggered(),this,myClose(event));
 
-    connect(btn1,btn1->clicked,this,[=](){
-    qDebug()<<m;
-    });
-    connect(btn2,btn2->clicked,this,[m]()mutable
-    {
-        m=20;
-        qDebug()<<m;
-    });
-
-    connect(btn,&QPushButton::clicked,this,[=](){
-        btn->setText("bbb");
-    });
-    int num=[=]()->int{return 1000;}();
-    qDebug()<<num;
+//   }
+    connect(ui->actionExit,QAction::triggered,[=](){this->close();});
 }
 
 MyNote::~MyNote()
@@ -44,14 +29,16 @@ MyNote::~MyNote()
     delete ui;
 }
 
-
+//New File
 void MyNote::on_actionNew_triggered()
 {
     //新建文件功能的实现
     ui->textEdit->clear();
+    //对退出事件单独定义槽事件
+
 }
 
-
+//Open File
 void MyNote::on_actionOpen_triggered()
 {
     QString files = QFileDialog::getOpenFileName(this,"打开新的文本文件","/我的文件");
@@ -75,4 +62,67 @@ QFile file(files);
     qDebug() << "创建日期：" << info.created().toString("yyyy-MM-dd hh:mm:ss")<<
                 "最后修改日期："<<info.lastModified().toString("yyyy/MM/dd hh:mm:ss");
 }
+
+//Save File
+void MyNote::on_actionSave_triggered()
+{
+    QFileDialog myfiledialog;
+    QString fileName=myfiledialog.getSaveFileName(this,tr("保存文件"),"",tr("Text File(*.txt)"));
+    if(fileName=="")
+    {
+        return;
+    }
+    QFile file(fileName);
+    if(!file.open(QIODevice::WriteOnly | QIODevice::Text))
+    {
+        QMessageBox::warning(this,tr("错误"),tr("打开文件失败"));
+        return;
+    }
+    else
+    {
+        QTextStream textStream(&file);
+        QString str=ui->textEdit->toPlainText();
+        textStream<<str;
+        QMessageBox::warning(this,tr("提示"),tr("保存文件成功"));
+       FileContent=str;
+        file.close();
+    }
+
+}
+//Exit
+//这个功能要重写
+//void MyNote::on_actionExit_triggered(QCloseEvent *event)
+//{
+// //对保存文件的判断
+//    if(ui->textEdit->toPlainText()==FileContent){
+//      event->accept();
+//    }
+//    else{
+//        if(QMessageBox::warning(this,tr("警告"),tr("文件还未保存，确认退出？"),QMessageBox::Yes|QMessageBox::No)==QMessageBox::Yes){
+//            event->accept();
+//        }
+//        else{
+//            event->ignore();
+//        }
+
+//    }
+//    close();
+//}
+
+//void MyNote::myClose(QCloseEvent *event){
+//    if(ui->textEdit->toPlainText()==FileContent){
+//        event->accept();
+//      }
+//      else{
+//          if(QMessageBox::warning(this,tr("警告"),tr("文件还未保存，确认退出？"),QMessageBox::Yes|QMessageBox::No)==QMessageBox::Yes){
+//              event->accept();
+//          }
+//          else{
+//              event->ignore();
+//          }
+
+//      }
+//      close();
+//}
+
 

@@ -20,6 +20,11 @@ private slots:
 
     void on_actionOpen_triggered();
 
+    void on_actionSave_triggered();
+
+   // void on_actionExit_triggered(QCloseEvent *event);
+//void myClose(QCloseEvent *event);
+
 private:
     Ui::MyNote *ui;
 };
