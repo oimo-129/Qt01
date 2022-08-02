@@ -25,7 +25,12 @@ private slots:
    // void on_actionExit_triggered(QCloseEvent *event);
 //void myClose(QCloseEvent *event);
 
+    void on_actionColor_triggered();
+
+    void on_actionFont_triggered();
+
 private:
+    void paintEvent(QPaintEvent *);
     Ui::MyNote *ui;
 };
 #endif // MYNOTE_H

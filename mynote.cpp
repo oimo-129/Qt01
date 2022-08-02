@@ -11,16 +11,28 @@
 #include<QPushButton>
 #include<QMessageBox>
 #include<QCloseEvent>
+#include<QColor>
+#include<QFont>
+#include<QColorDialog>
+#include<QFontDialog>
+#include<QPaintEvent>
+#include<QPainter>
 QString FileContent;
 MyNote::MyNote(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MyNote)
 {
     ui->setupUi(this);
-    //进行相关的测试演示
-//    connect(ui->actionExit,ui->actionExit->triggered(),this,myClose(event));
+    this->setWindowIcon(QIcon(":/Image/OnePiece.png"));
 
-//   }
+    //进行相关的测试演示
+    //    connect(ui->actionExit,ui->actionExit->triggered(),this,myClose(event));
+
+    //   }
+    ui->textEdit->setHidden(true);
+    this->setMaximumSize(800,800);
+    this->setMinimumSize(800,800);
+
     connect(ui->actionExit,QAction::triggered,[=](){this->close();});
 }
 
@@ -33,9 +45,14 @@ MyNote::~MyNote()
 void MyNote::on_actionNew_triggered()
 {
     //新建文件功能的实现
+    ui->textEdit->setHidden(false);
     ui->textEdit->clear();
     //对退出事件单独定义槽事件
 
+}
+void MyNote::paintEvent(QPaintEvent *){
+    QPainter p(this);
+    p.drawPixmap(rect(),QPixmap(":/Image/background.jpg"));
 }
 
 //Open File
@@ -44,9 +61,9 @@ void MyNote::on_actionOpen_triggered()
     QString files = QFileDialog::getOpenFileName(this,"打开新的文本文件","/我的文件");
     qDebug()<<files;
     ui->lineEdit->setText(files);
-  QTextCodec *codec = QTextCodec::codecForName("gbk");
-  //QTextCodec::setCodecForCStrings(QTextCodec::codecForName("UTF-8"));
-QFile file(files);
+    //QTextCodec *codec = QTextCodec::codecForName("gbk");
+    //QTextCodec::setCodecForCStrings(QTextCodec::codecForName("UTF-8"));
+    QFile file(files);
     file.open(QIODevice::ReadOnly);
     QByteArray array;
     while(!file.atEnd()){
@@ -84,11 +101,13 @@ void MyNote::on_actionSave_triggered()
         QString str=ui->textEdit->toPlainText();
         textStream<<str;
         QMessageBox::warning(this,tr("提示"),tr("保存文件成功"));
-       FileContent=str;
+        FileContent=str;
         file.close();
     }
 
 }
+//8.2日，添加笔记本菜单栏的第二个功能
+
 //Exit
 //这个功能要重写
 //void MyNote::on_actionExit_triggered(QCloseEvent *event)
@@ -125,4 +144,33 @@ void MyNote::on_actionSave_triggered()
 //      close();
 //}
 
+
+
+void MyNote::on_actionColor_triggered()
+{
+    //实现笔记本对于字体颜色的调整
+    QColor col=QColorDialog::getColor(Qt::blue,this);
+    if(col.isValid())
+    {
+        ui->textEdit->setTextColor(col);
+    }else{
+        QMessageBox::information(this,"错误信息","颜色不合法");
+        return;
+    }
+}
+
+
+void MyNote::on_actionFont_triggered()
+{
+    //实现笔记本字体的调整
+    bool ok;
+    QFont font=QFontDialog::getFont(&ok, QFont("Helvetica [Cronyx]", 10),this);
+    if(ok){
+        ui->textEdit->setFont(font);
+    }else{
+        QMessageBox::information(this,"错误信息","字体不合法");
+        return;
+    }
+
+}
 
