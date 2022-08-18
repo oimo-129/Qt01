@@ -8,7 +8,7 @@
 #include<QTextCodec>
 #include<QDebug>
 #include<QDateTime>
-#include<QPushButton>
+#include<QPushButton>  //时间按钮
 #include<QMessageBox>
 #include<QCloseEvent>
 #include<QColor>
@@ -17,6 +17,11 @@
 #include<QFontDialog>
 #include<QPaintEvent>
 #include<QPainter>
+#include<QCoreApplication>
+#include<QApplication>
+#include<QDesktopServices>
+#include<QUrl>
+#include"gif.h"
 QString FileContent;
 MyNote::MyNote(QWidget *parent)
     : QMainWindow(parent)
@@ -34,6 +39,8 @@ MyNote::MyNote(QWidget *parent)
     this->setMinimumSize(800,800);
 
     connect(ui->actionExit,QAction::triggered,[=](){this->close();});
+    //Qt功能的介绍
+    connect(ui->actionQt,QAction::triggered,qApp,QApplication::aboutQt);
 }
 
 MyNote::~MyNote()
@@ -171,6 +178,32 @@ void MyNote::on_actionFont_triggered()
         QMessageBox::information(this,"错误信息","字体不合法");
         return;
     }
+
+}
+
+
+void MyNote::on_actionDateTime_triggered()
+{
+    QDateTime current=QDateTime::currentDateTime();
+    QString time=current.toString("yyyy-M-dd hh:mm:ss");
+//希望能够更改输出的时间的格式
+    //time=time.replace(valueRegExp, "<font style='font-size:16px; background-color:white; color:blue;'>\\1</font>");
+    ui->textEdit->append(time);
+}
+
+
+
+
+void MyNote::on_actionGithub_triggered()
+{
+  QDesktopServices::openUrl( QUrl("https://github.com/oimo-129"))  ;
+}
+
+//显示展示gif的相关功能
+void MyNote::on_actionJif_triggered()
+{
+    Gif *gif=new Gif;
+    gif->show();
 
 }
 

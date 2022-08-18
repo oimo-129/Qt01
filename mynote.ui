@@ -34,7 +34,11 @@
        </widget>
       </item>
       <item>
-       <widget class="QTextEdit" name="textEdit"/>
+       <widget class="QTextEdit" name="textEdit">
+        <property name="styleSheet">
+         <string notr="true">border-image: url(:/Image/background.jpg);</string>
+        </property>
+       </widget>
       </item>
      </layout>
     </item>
@@ -65,15 +69,46 @@
     <addaction name="actionColor"/>
     <addaction name="actionFont"/>
    </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>扩展槽</string>
+    </property>
+    <addaction name="actionDateTime"/>
+    <addaction name="actionQt"/>
+    <addaction name="actionGithub"/>
+    <addaction name="actionJif"/>
+   </widget>
    <addaction name="menu"/>
    <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionNew"/>
+   <addaction name="actionSave"/>
   </widget>
   <action name="actionNew">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/Image/icon.png</normaloff>:/Image/icon.png</iconset>
+   </property>
    <property name="text">
     <string>新建</string>
    </property>
   </action>
   <action name="actionSave">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/Image/icon.png</normaloff>:/Image/icon.png</iconset>
+   </property>
    <property name="text">
     <string>保存</string>
    </property>
@@ -98,7 +133,32 @@
     <string>字体</string>
    </property>
   </action>
+  <action name="actionDateTime">
+   <property name="text">
+    <string>显示时间</string>
+   </property>
+  </action>
+  <action name="actionQt">
+   <property name="text">
+    <string>Qt说明</string>
+   </property>
+  </action>
+  <action name="actionGithub">
+   <property name="text">
+    <string>我的Github</string>
+   </property>
+   <property name="iconText">
+    <string>我的Github</string>
+   </property>
+  </action>
+  <action name="actionJif">
+   <property name="text">
+    <string>显示Gif</string>
+   </property>
+  </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
  <connections/>
 </ui>

@@ -29,6 +29,14 @@ private slots:
 
     void on_actionFont_triggered();
 
+    void on_actionDateTime_triggered();
+
+
+
+    void on_actionGithub_triggered();
+
+    void on_actionJif_triggered();
+
 private:
     void paintEvent(QPaintEvent *);
     Ui::MyNote *ui;

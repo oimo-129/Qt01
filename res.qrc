@@ -2,5 +2,7 @@
     <qresource prefix="/">
         <file>Image/OnePiece.png</file>
         <file>Image/background.jpg</file>
+        <file>Image/icon.png</file>
+        <file>Image/mario.gif</file>
     </qresource>
 </RCC>
