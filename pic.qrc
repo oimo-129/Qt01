@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>picture/refresh.gif</file>
+        <file>picture/background.jpg</file>
+        <file>picture/R-C.jfif</file>
+        <file>picture/R-C (1).jfif</file>
+        <file>picture/R-C (2).jfif</file>
+        <file>picture/test.jfif</file>
+        <file>picture/mouse_clicked.gif</file>
+        <file>picture/myQss.qss</file>
+        <file>picture/bg1 (2).jpg</file>
+        <file>picture/bg2.jpg</file>
+        <file>picture/bg3 (2).jpg</file>
+        <file>picture/ComboBox.jfif</file>
+    </qresource>
+</RCC>

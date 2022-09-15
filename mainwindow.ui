@@ -1,0 +1,2375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1250</width>
+    <height>780</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1250</width>
+    <height>730</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1250</width>
+    <height>780</height>
+   </size>
+  </property>
+  <property name="cursor">
+   <cursorShape>ArrowCursor</cursorShape>
+  </property>
+  <property name="mouseTracking">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>Supervise System</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>true</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QComboBox {
+     border :  1px  solid  gray ;
+     border-radius:  3px ;
+     padding :  1px  2px  1px  2px ;  
+}
+QComboBox::drop-down {
+     subcontrol-origin: padding;
+     subcontrol- position :  top  right ;
+     width :  20px ;
+ 
+     border-left-width :  1px ;
+     border-left-color : darkgray;
+     border-left-style :  solid ;  /* just a single line */
+     border-top-right-radius:  3px ;  /* same radius as the QComboBox */
+     border-bottom-right-radius:  3px ;
+}
+</string>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout_8">
+    <item row="0" column="0" colspan="2">
+     <widget class="QGroupBox" name="groupBox_3">
+      <property name="minimumSize">
+       <size>
+        <width>800</width>
+        <height>85</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>ArrowCursor</cursorShape>
+      </property>
+      <property name="title">
+       <string>串口设置</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_6">
+       <item row="0" column="0">
+        <widget class="QFrame" name="frame">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="cursor">
+          <cursorShape>OpenHandCursor</cursorShape>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_5">
+          <item row="0" column="0">
+           <widget class="QLabel" name="chuankou_label">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+	border: 2px solid rgb(192,142,175);
+    border-radius: 4px;
+     padding: 2px;
+}</string>
+            </property>
+            <property name="text">
+             <string>串口号:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QComboBox" name="chuankou_button">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QComboBox {
+     border :  1px  solid  gray ;
+     border-radius:  3px ;
+     padding :  1px  2px  1px  2px ;   
+}
+QComboBox::drop-down {
+     subcontrol-origin: padding;
+     subcontrol- position :  top  right ;
+     width :  20px ;
+ 
+     border-left-width :  1px ;
+     border-left-color : darkgray;
+     border-left-style :  solid ;  /* just a single line */
+     border-top-right-radius:  3px ;  /* same radius as the QComboBox */
+     border-bottom-right-radius:  3px ;
+}</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QLabel" name="bote_label">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+	border: 2px solid rgb(192,142,175);
+    border-radius: 4px;
+     padding: 2px;
+}</string>
+            </property>
+            <property name="text">
+             <string>波特率:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="QComboBox" name="bote_button">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QComboBox {
+     border :  1px  solid  gray ;
+     border-radius:  3px ;
+     padding :  1px  2px  1px  2px ;   
+}
+QComboBox::drop-down {
+     subcontrol-origin: padding;
+     subcontrol- position :  top  right ;
+     width :  20px ;
+ 
+     border-left-width :  1px ;
+     border-left-color : darkgray;
+     border-left-style :  solid ;  /* just a single line */
+     border-top-right-radius:  3px ;  /* same radius as the QComboBox */
+     border-bottom-right-radius:  3px ;
+}</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>2400</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>4800</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="0" column="4">
+           <widget class="QLabel" name="stop_label">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+	border: 2px solid rgb(192,142,175);
+    border-radius: 4px;
+     padding: 2px;
+}</string>
+            </property>
+            <property name="text">
+             <string>停止位:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="5">
+           <widget class="QComboBox" name="stop_button">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QComboBox {
+     border :  1px  solid  gray ;
+     border-radius:  3px ;
+     padding :  1px  2px  1px  2px ;  
+}
+QComboBox::drop-down {
+     subcontrol-origin: padding;
+     subcontrol- position :  top  right ;
+     width :  20px ;
+ 
+     border-left-width :  1px ;
+     border-left-color : darkgray;
+     border-left-style :  solid ;  /* just a single line */
+     border-top-right-radius:  3px ;  /* same radius as the QComboBox */
+     border-bottom-right-radius:  3px ;
+}</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>1</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>2</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="0" column="6">
+           <widget class="QLabel" name="data_label">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+	border: 2px solid rgb(192,142,175);
+    border-radius: 4px;
+     padding: 2px;
+
+}</string>
+            </property>
+            <property name="text">
+             <string>数据位:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="7">
+           <widget class="QComboBox" name="data_button">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QComboBox {
+     border :  1px  solid  gray ;
+     border-radius:  3px ;
+     padding :  1px  2px  1px  2px ;  
+}
+QComboBox::drop-down {
+     subcontrol-origin: padding;
+     subcontrol- position :  top  right ;
+     width :  20px ;
+ 
+     border-left-width :  1px ;
+     border-left-color : darkgray;
+     border-left-style :  solid ;  /* just a single line */
+     border-top-right-radius:  3px ;  /* same radius as the QComboBox */
+     border-bottom-right-radius:  3px ;
+}</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>5</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>6</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>7</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>8</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="0" column="8">
+           <widget class="QLabel" name="jiou_label">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+	border: 2px solid rgb(192,142,175);
+    border-radius: 4px;
+     padding: 2px;
+}</string>
+            </property>
+            <property name="text">
+             <string>奇偶校验:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="9">
+           <widget class="QComboBox" name="jiou_button">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <item>
+             <property name="text">
+              <string>none</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>odd</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>even</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="1" column="0" colspan="2">
+     <widget class="QWidget" name="widget_6" native="true">
+      <layout class="QGridLayout" name="gridLayout_10">
+       <item row="0" column="2">
+        <widget class="QComboBox" name="data_button_2">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>90</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>90</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QComboBox {
+     border :  1px  solid  gray ;
+     border-radius:  3px ;
+     padding :  1px  2px  1px  2px ;  
+}
+QComboBox::drop-down {
+     subcontrol-origin: padding;
+     subcontrol- position :  top  right ;
+     width :  20px ;
+ 
+     border-left-width :  1px ;
+     border-left-color : darkgray;
+     border-left-style :  solid ;  /* just a single line */
+     border-top-right-radius:  3px ;  /* same radius as the QComboBox */
+     border-bottom-right-radius:  3px ;
+}</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>4013</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>其他</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLabel" name="select_treaty_label">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>90</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>90</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+	border: 2px solid rgb(192,142,175);
+    border-radius: 4px;
+     padding: 2px;
+
+}</string>
+         </property>
+         <property name="text">
+          <string>选择规格:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_2">
+         <property name="minimumSize">
+          <size>
+           <width>180</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>180</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+}</string>
+         </property>
+         <property name="text">
+          <string>时间：</string>
+         </property>
+         <property name="textFormat">
+          <enum>Qt::RichText</enum>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QWidget" name="widget_8" native="true">
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QGroupBox" name="groupBox">
+         <property name="minimumSize">
+          <size>
+           <width>500</width>
+           <height>100</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>10777215</width>
+           <height>100</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>ArrowCursor</cursorShape>
+         </property>
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
+         <property name="title">
+          <string>从机协议</string>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QLabel" name="treaty_label_2">
+            <property name="minimumSize">
+             <size>
+              <width>42</width>
+              <height>51</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+	
+     padding: 2px;
+}</string>
+            </property>
+            <property name="text">
+             <string>协议报：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="treaty_1">
+            <property name="minimumSize">
+             <size>
+              <width>400</width>
+              <height>51</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    font: 11pt;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+	border: 2px solid rgb(167,168,189);
+    border-radius: 4px;
+     padding: 2px;
+}</string>
+            </property>
+            <property name="text">
+             <string>NULL</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_2">
+         <property name="minimumSize">
+          <size>
+           <width>400</width>
+           <height>200</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="title">
+          <string>测试参数</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_3">
+          <item row="0" column="0">
+           <widget class="QWidget" name="widget" native="true">
+            <layout class="QGridLayout" name="gridLayout">
+             <item row="0" column="3">
+              <widget class="QLabel" name="work_time_label">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>105</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>105</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+
+	border: 2px solid rgb(167,168,189);
+    border-radius: 4px;
+     padding: 2px;
+}</string>
+               </property>
+               <property name="text">
+                <string>0s</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="TIGBT_label">
+               <property name="enabled">
+                <bool>true</bool>
+               </property>
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+
+
+}</string>
+               </property>
+               <property name="text">
+                <string>IGBT1温度:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="top_hit_state">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                 <italic>false</italic>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+
+
+}</string>
+               </property>
+               <property name="text">
+                <string>顶部温度:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="0" colspan="2">
+              <widget class="QLabel" name="TTAD">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+
+
+}</string>
+               </property>
+               <property name="text">
+                <string>IGBT反压保护:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="0" colspan="2">
+              <widget class="QLabel" name="work_phase">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+
+
+}</string>
+               </property>
+               <property name="text">
+                <string>IGBT浪涌保护:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="3">
+              <widget class="QLabel" name="TIGBT_">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>105</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>105</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+
+	border: 2px solid rgb(167,168,189);
+    border-radius: 4px;
+     padding: 2px;
+}</string>
+               </property>
+               <property name="text">
+                <string>0</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="3">
+              <widget class="QLabel" name="top_hit_">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>105</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>105</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+
+	border: 2px solid rgb(167,168,189);
+    border-radius: 4px;
+     padding: 2px;
+}</string>
+               </property>
+               <property name="text">
+                <string>0</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="3">
+              <widget class="QLabel" name="TTAD_label">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>105</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>105</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    font: 11pt;
+	font-family:&quot;QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+
+	border: 2px solid rgb(167,168,189);
+    border-radius: 4px;
+     padding: 2px;
+}Vrinda&quot;;
+    color: rgb(0, 0, 127);
+}</string>
+               </property>
+               <property name="text">
+                <string>无</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="3">
+              <widget class="QLabel" name="work_phase_label">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>105</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>105</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    font: 11pt;
+	font-family:&quot;VrQLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+
+	border: 2px solid rgb(167,168,189);
+    border-radius: 4px;
+     padding: 2px;
+}inda&quot;;
+    color: rgb(0, 0, 127);
+}</string>
+               </property>
+               <property name="text">
+                <string>无</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0" colspan="2">
+              <widget class="QLabel" name="work_time">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>130</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>8777215</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                 <italic>false</italic>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+
+
+}</string>
+               </property>
+               <property name="text">
+                <string>工作时间:</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QWidget" name="widget_2" native="true">
+            <layout class="QGridLayout" name="gridLayout_2">
+             <item row="1" column="0" colspan="3">
+              <widget class="QLabel" name="RIGBT_label">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+
+
+}</string>
+               </property>
+               <property name="text">
+                <string>IGBT2温度:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="0">
+              <widget class="QLabel" name="m_hit_state">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+
+
+}</string>
+               </property>
+               <property name="text">
+                <string>检锅蜂鸣：</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="3">
+              <widget class="QLabel" name="mode_">
+               <property name="minimumSize">
+                <size>
+                 <width>105</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>105</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+
+	border: 2px solid rgb(167,168,189);
+    border-radius: 4px;
+     padding: 2px;
+}</string>
+               </property>
+               <property name="text">
+                <string>NULL</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0" colspan="2">
+              <widget class="QLabel" name="mode_label">
+               <property name="minimumSize">
+                <size>
+                 <width>51</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>90</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+}</string>
+               </property>
+               <property name="text">
+                <string>工作步骤：</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0" colspan="2">
+              <widget class="QLabel" name="b_hit_state">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+
+
+}</string>
+               </property>
+               <property name="text">
+                <string>底部温度:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="3">
+              <widget class="QLabel" name="b_hit_">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>105</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>105</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+
+	border: 2px solid rgb(167,168,189);
+    border-radius: 4px;
+     padding: 2px;
+}</string>
+               </property>
+               <property name="text">
+                <string>0</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="0">
+              <widget class="QLabel" name="R_hit_state">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>130</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+
+
+}</string>
+               </property>
+               <property name="text">
+                <string>IGBT过流保护:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="3">
+              <widget class="QLabel" name="R_hit_">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>105</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>105</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+
+	border: 2px solid rgb(167,168,189);
+    border-radius: 4px;
+     padding: 2px;
+}</string>
+               </property>
+               <property name="text">
+                <string>无</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="3">
+              <widget class="QLabel" name="m_hit_">
+               <property name="minimumSize">
+                <size>
+                 <width>105</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>105</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+
+	border: 2px solid rgb(167,168,189);
+    border-radius: 4px;
+     padding: 2px;
+}</string>
+               </property>
+               <property name="text">
+                <string>无蜂鸣</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="3">
+              <widget class="QLabel" name="RIGBT_">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>105</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>105</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+
+	border: 2px solid rgb(167,168,189);
+    border-radius: 4px;
+     padding: 2px;
+}</string>
+               </property>
+               <property name="text">
+                <string>0</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QWidget" name="widget_9" native="true">
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QGroupBox" name="groupBox_6">
+         <property name="minimumSize">
+          <size>
+           <width>500</width>
+           <height>100</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>100</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>ArrowCursor</cursorShape>
+         </property>
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
+         <property name="title">
+          <string>主机协议</string>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item>
+           <widget class="QLabel" name="treaty_label_3">
+            <property name="minimumSize">
+             <size>
+              <width>42</width>
+              <height>51</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+	
+}</string>
+            </property>
+            <property name="text">
+             <string>协议报：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="treaty_2">
+            <property name="minimumSize">
+             <size>
+              <width>400</width>
+              <height>51</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    font: 11pt;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+	border: 2px solid rgb(167,168,189);
+    border-radius: 4px;
+     padding: 2px;
+}</string>
+            </property>
+            <property name="text">
+             <string>NULL</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_5">
+         <property name="minimumSize">
+          <size>
+           <width>400</width>
+           <height>200</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="title">
+          <string>测试参数</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_11">
+          <item row="0" column="0">
+           <widget class="QWidget" name="widget_4" native="true">
+            <layout class="QGridLayout" name="gridLayout_4">
+             <item row="4" column="0" rowspan="2" colspan="4">
+              <widget class="QLabel" name="b_hit_state_2">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+
+
+}</string>
+               </property>
+               <property name="text">
+                <string>底部线盘加热状态:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0" colspan="3">
+              <widget class="QLabel" name="top_hit_state_2">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>130</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                 <italic>false</italic>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+
+
+}</string>
+               </property>
+               <property name="text">
+                <string>顶加热状态:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="4" colspan="2">
+              <widget class="QLabel" name="work_time_label_2">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>105</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>105</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+
+	border: 2px solid rgb(167,168,189);
+    border-radius: 4px;
+     padding: 2px;
+}</string>
+               </property>
+               <property name="text">
+                <string>0s</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="4" colspan="2">
+              <widget class="QLabel" name="BI_1">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>105</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>105</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+
+	border: 2px solid rgb(167,168,189);
+    border-radius: 4px;
+     padding: 2px;
+}</string>
+               </property>
+               <property name="text">
+                <string>未加热</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLabel" name="work_time_2">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>140</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                 <italic>false</italic>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+
+
+}</string>
+               </property>
+               <property name="text">
+                <string>工作时间:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="1" rowspan="2" colspan="3">
+              <widget class="QLabel" name="work_phase_2">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+
+
+}</string>
+               </property>
+               <property name="text">
+                <string>饭煲状态:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="4" colspan="2">
+              <widget class="QLabel" name="B_1">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>105</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>105</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+
+	border: 2px solid rgb(167,168,189);
+    border-radius: 4px;
+     padding: 2px;
+}</string>
+               </property>
+               <property name="text">
+                <string>未加热</string>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="4" colspan="2">
+              <widget class="QLabel" name="state_1">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>105</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>105</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+
+	border: 2px solid rgb(167,168,189);
+    border-radius: 4px;
+     padding: 2px;
+}</string>
+               </property>
+               <property name="text">
+                <string>NULL</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0" rowspan="2" colspan="4">
+              <widget class="QLabel" name="TIGBT_label_2">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+
+
+}</string>
+               </property>
+               <property name="text">
+                <string>底部IGBT感温包AD:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="4">
+              <widget class="QLabel" name="top_1">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>105</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>105</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+
+	border: 2px solid rgb(167,168,189);
+    border-radius: 4px;
+     padding: 2px;
+}</string>
+               </property>
+               <property name="text">
+                <string>0</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QWidget" name="widget_5" native="true">
+            <layout class="QGridLayout" name="gridLayout_7">
+             <item row="0" column="1" rowspan="2">
+              <widget class="QLabel" name="type_1">
+               <property name="minimumSize">
+                <size>
+                 <width>105</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>105</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+
+	border: 2px solid rgb(167,168,189);
+    border-radius: 4px;
+     padding: 2px;
+}</string>
+               </property>
+               <property name="text">
+                <string>NULL</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QLabel" name="RI_1">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>105</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>105</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+
+	border: 2px solid rgb(167,168,189);
+    border-radius: 4px;
+     padding: 2px;
+}</string>
+               </property>
+               <property name="text">
+                <string>0</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="0">
+              <widget class="QLabel" name="TTAD_2">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+
+
+}</string>
+               </property>
+               <property name="text">
+                <string>顶部感温包AD值:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="1">
+              <widget class="QLabel" name="T_1">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>105</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>105</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+
+	border: 2px solid rgb(167,168,189);
+    border-radius: 4px;
+     padding: 2px;
+}</string>
+               </property>
+               <property name="text">
+                <string>0</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="0">
+              <widget class="QLabel" name="R_hit_state_2">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+
+
+}</string>
+               </property>
+               <property name="text">
+                <string>R角线盘加热状态:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="1">
+              <widget class="QLabel" name="R_1">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>105</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>105</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+
+	border: 2px solid rgb(167,168,189);
+    border-radius: 4px;
+     padding: 2px;
+}</string>
+               </property>
+               <property name="text">
+                <string>未加热</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="0">
+              <widget class="QLabel" name="m_hit_state_2">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+
+
+}</string>
+               </property>
+               <property name="text">
+                <string>侧加热状态:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="1">
+              <widget class="QLabel" name="C_1">
+               <property name="minimumSize">
+                <size>
+                 <width>105</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>105</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+
+	border: 2px solid rgb(167,168,189);
+    border-radius: 4px;
+     padding: 2px;
+}</string>
+               </property>
+               <property name="text">
+                <string>未加热</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="RIGBT_label_2">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+
+
+}</string>
+               </property>
+               <property name="text">
+                <string>R角IGBT感温包AD:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0" rowspan="2">
+              <widget class="QLabel" name="mode_label_2">
+               <property name="minimumSize">
+                <size>
+                 <width>130</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>51</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+    color: rgb(0, 0, 127);
+}</string>
+               </property>
+               <property name="text">
+                <string>模式：</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="3" column="0" colspan="2">
+     <widget class="QWidget" name="widget_7" native="true">
+      <layout class="QGridLayout" name="gridLayout_9">
+       <item row="0" column="0">
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>30</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="0" column="1">
+        <widget class="QPushButton" name="start_test">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>OpenHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+	background-color:rgb(225, 225, 225);
+	border:1px groove gray;
+	border-radius:4px;
+	padding:4px 4px;
+	border-style: outset;
+	width:80px;
+	background-color:transparent;
+}
+QPushButton:hover{background-color:rgb(229, 241, 251); color: black;}
+ QPushButton:pressed{background-color:rgb(204, 228, 247);border-style: inset;}</string>
+         </property>
+         <property name="text">
+          <string>开始测试</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <spacer name="horizontalSpacer_4">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>30</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="0" column="3">
+        <widget class="QPushButton" name="end_test">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="cursor">
+          <cursorShape>ClosedHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+    font: 11pt;
+	font: bold;
+	font-family:&quot;Vrinda&quot;;
+	background-color:rgb(225, 225, 225);
+	border:1px groove gray;
+	border-radius:4px;
+	padding:4px 4px;
+	border-style: outset;
+	width:80px;
+	background-color:transparent;
+}
+QPushButton:hover{background-color:rgb(229, 241, 251); color: black;}
+ QPushButton:pressed{background-color:rgb(204, 228, 247);border-style: inset;}</string>
+         </property>
+         <property name="text">
+          <string>停止测试</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="4">
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>30</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1250</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="styleSheet">
+     <string notr="true">
+QMenu {
+	color:black;
+	background-color:white; 
+	border-radius:3px;
+	padding:5px;
+	margin:6px;
+}
+QMenu::item:text { 
+	padding-left:10px;
+	padding-right:10px;
+}
+QMenu::item:selected{ 
+	color:#1aa3ff;
+	background-color: #e5f5ff;
+	border-radius:3px;
+}
+QMenu::separator{
+	height:1px;
+	background:#bbbbbb;
+	margin:5px;
+	margin-left:10px;
+	margin-right:10px;
+}
+ 
+</string>
+    </property>
+    <property name="title">
+     <string>功能（F）</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSearch"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menu_E">
+    <property name="styleSheet">
+     <string notr="true">
+QMenu {
+	color:black;
+	background-color:white; 
+	border-radius:3px;
+	padding:5px;
+	margin:6px;
+}
+QMenu::item:text { 
+	padding-left:10px;
+	padding-right:10px;
+}
+QMenu::item:selected{ 
+	color:#1aa3ff;
+	background-color: #e5f5ff;
+	border-radius:3px;
+}
+QMenu::separator{
+	height:1px;
+	background:#bbbbbb;
+	margin:5px;
+	margin-left:10px;
+	margin-right:10px;
+}
+ 
+</string>
+    </property>
+    <property name="title">
+     <string>编辑（E）</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_T">
+    <property name="styleSheet">
+     <string notr="true">
+QMenu {
+	color:black;
+	background-color:white; 
+	border-radius:3px;
+	padding:5px;
+	margin:6px;
+}
+QMenu::item:text { 
+	padding-left:10px;
+	padding-right:10px;
+}
+QMenu::item:selected{ 
+	color:#1aa3ff;
+	background-color: #e5f5ff;
+	border-radius:3px;
+}
+QMenu::separator{
+	height:1px;
+	background:#bbbbbb;
+	margin:5px;
+	margin-left:10px;
+	margin-right:10px;
+}
+ 
+</string>
+    </property>
+    <property name="title">
+     <string>工具（T）</string>
+    </property>
+    <addaction name="actiona_4"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menu_H">
+    <property name="styleSheet">
+     <string notr="true">
+QMenu {
+	color:black;
+	background-color:white; 
+	border-radius:3px;
+	padding:5px;
+	margin:6px;
+}
+QMenu::item:text { 
+	padding-left:10px;
+	padding-right:10px;
+}
+QMenu::item:selected{ 
+	color:#1aa3ff;
+	background-color: #e5f5ff;
+	border-radius:3px;
+}
+QMenu::separator{
+	height:1px;
+	background:#bbbbbb;
+	margin:5px;
+	margin-left:10px;
+	margin-right:10px;
+}
+ 
+</string>
+    </property>
+    <property name="title">
+     <string>帮助（H）</string>
+    </property>
+    <addaction name="actiona_5"/>
+    <addaction name="separator"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_E"/>
+   <addaction name="menu_T"/>
+   <addaction name="menu_H"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionSearch">
+   <property name="text">
+    <string>查询</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::AboutRole</enum>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="text">
+    <string>制图</string>
+   </property>
+  </action>
+  <action name="actionRestore">
+   <property name="text">
+    <string>另存为</string>
+   </property>
+  </action>
+  <action name="actiona">
+   <property name="text">
+    <string>剪切</string>
+   </property>
+  </action>
+  <action name="actiona_2">
+   <property name="text">
+    <string>复制</string>
+   </property>
+  </action>
+  <action name="actiona_3">
+   <property name="text">
+    <string>粘贴</string>
+   </property>
+  </action>
+  <action name="actiona_4">
+   <property name="text">
+    <string>外观</string>
+   </property>
+  </action>
+  <action name="actiona_5">
+   <property name="text">
+    <string>检查更新</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
