@@ -14,6 +14,8 @@ class SmallWidget : public QWidget
 public:
     explicit SmallWidget(QWidget *parent = nullptr);
     ~SmallWidget();
+    void setDate(int);
+    int  getDate();
 
 private:
     Ui::SmallWidget *ui;

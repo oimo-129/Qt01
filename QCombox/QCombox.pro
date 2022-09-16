@@ -20,7 +20,6 @@ HEADERS += \
     widget.h
 
 FORMS += \
-    form.ui \
     form1.ui \
     smallwidget.ui \
     widget.ui

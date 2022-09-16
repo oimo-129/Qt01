@@ -13,6 +13,21 @@ SmallWidget::SmallWidget(QWidget *parent) :
     connect(ui->horizontalSlider,&QSlider::valueChanged,[=](int val ){
         ui->spinBox->setValue(val);
     });
+
+    }
+
+//添加相关的功能
+int  SmallWidget::getDate()
+{
+    return ui->horizontalSlider->value();
+
+}
+
+void SmallWidget::setDate(int val)
+{
+    ui->horizontalSlider->setValue(val);
+
+
 }
 
 SmallWidget::~SmallWidget()

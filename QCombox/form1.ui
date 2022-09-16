@@ -6,23 +6,38 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>402</width>
+    <height>123</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="SmallWidget" name="widget" native="true">
-   <property name="geometry">
-    <rect>
-     <x>50</x>
-     <y>10</y>
-     <width>241</width>
-     <height>80</height>
-    </rect>
-   </property>
-  </widget>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <widget class="SmallWidget" name="widget" native="true"/>
+   </item>
+   <item>
+    <widget class="QWidget" name="widget_2" native="true">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QPushButton" name="btn1">
+        <property name="text">
+         <string>设置到50</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn2">
+        <property name="text">
+         <string>返回值</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
  </widget>
  <customwidgets>
   <customwidget>

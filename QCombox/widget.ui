@@ -6,25 +6,52 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>408</width>
-    <height>268</height>
+    <width>574</width>
+    <height>586</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Widget</string>
+   <string>控件功能实现</string>
   </property>
-  <widget class="QWidget" name="widget_2" native="true">
-   <property name="geometry">
-    <rect>
-     <x>9</x>
-     <y>9</y>
-     <width>140</width>
-     <height>82</height>
-    </rect>
-   </property>
-   <layout class="QHBoxLayout" name="horizontalLayout">
-    <item>
+  <layout class="QVBoxLayout" name="verticalLayout_3">
+   <item>
+    <widget class="QWidget" name="widget_4" native="true">
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QPushButton" name="pushButton">
+        <property name="text">
+         <string>弹出新界面</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="exit">
+        <property name="text">
+         <string>点击实现退出</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn">
+        <property name="text">
+         <string>PushButton</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="widget_2" native="true">
      <widget class="QWidget" name="widget" native="true">
+      <property name="geometry">
+       <rect>
+        <x>9</x>
+        <y>9</y>
+        <width>65</width>
+        <height>64</height>
+       </rect>
+      </property>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
         <widget class="QRadioButton" name="radioButton">
@@ -42,36 +69,108 @@
        </item>
       </layout>
      </widget>
-    </item>
-    <item>
-     <widget class="QComboBox" name="comboBox">
-      <item>
-       <property name="text">
-        <string>小明</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>小花</string>
-       </property>
-      </item>
+     <widget class="QWidget" name="widget_5" native="true">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>10</y>
+        <width>126</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QComboBox" name="cBox1">
+         <item>
+          <property name="text">
+           <string>小明</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>小花</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="cBox2">
+         <item>
+          <property name="text">
+           <string>男性</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>女性</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
      </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QPushButton" name="pushButton">
-   <property name="geometry">
-    <rect>
-     <x>270</x>
-     <y>50</y>
-     <width>75</width>
-     <height>24</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>弹出新界面</string>
-   </property>
-  </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="widget_3" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>打开程序</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="text">
+         <string>确认</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="widget_6" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>单独实现符合功能</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QSpinBox" name="spinBox"/>
+      </item>
+      <item>
+       <widget class="QSlider" name="horizontalSlider">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>
